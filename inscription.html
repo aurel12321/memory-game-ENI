@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Inscription</title>
+</head>
+<body>
+    <h1> ENI - MEMORY</h1>
+    <div class="menu">
+        <a href="accueil.html">Accueil</a>
+        <a href="inscription.html">S'inscrire</a>
+        <a href="connexion.html">Se connecter</a>
+        <a href="profil.html">Profil</a>
+        <a href="jeu.html">Jouer</a>
+    </div>
+    <div class="main-container">
+        <h2>Inscrivez-vous</h2>
+        <form>
+            <div class="class-form">
+                <label for="user">Nom d'utilisateur</label>
+                <input class="input-form" type="text" name="user" id="user" required>
+                <div id="alert-user"></div>
+            </div>
+            <div class="class-form">
+                <label for="email">Entrer votre email</label>
+                <input class="input-form" type="email" name="email" id="email" required>
+                <div id="alert-email"></div>
+            </div>
+        
+            <div class="class-form">
+                <label for="password"> Mot de passe</label>
+                <input class="input-form" type="password" name="password" id="password" required>
+                <div id="alert-password"></div>
+            </div>
+        
+            <div class="class-form">
+                <label for="password-confirm">Confirmez le mot de passe</label>
+                <input class="input-form" type="password" name="password-confirm" id="password-confirm" required>
+                <div id="alert-password-confirm"></div>
+            </div>
+        
+        
+            <div>
+                <input id="register-btn" type="button" value="Création du compte">
+            </div>
+        
+        
+        </form>
+    </div>
+   
+    <script type="module" src="script.js"></script>
+    
+
+</body>
+<script src="register.js"></script>
+
+</html>
