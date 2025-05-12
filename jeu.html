@@ -12,13 +12,25 @@
         <a href="accueil.html">Accueil</a>
         <a href="inscription.html">S'inscrire</a>
         <a href="connexion.html">Se connecter</a>
-        <a href="profil.html">Profil</a>
-        <a href="jeu.html">Jouer</a>
+        <a href="jeu.html" aria-disabled="true">Jouer</a>
     </div>
     <div class="main-container">
         <div id="score-tab">
-            <h2>Derniers meilleurs scores</h2>
-            <div>Tab</div>
+            <h2 id="title-bord">Tableau des derniers scores</h2>
+            <div class="board">
+                <table id="tableau">
+                    <thead>
+                        <tr>
+                            <th scope="col">Pseudo</th>
+                            <th scope="col">Difficulté</th>
+                            <th scope="col">Score</th>
+                            <th scope="col">Date</th>
+                        </tr>
+                    </thead>
+                    
+               
+                </table>
+            </div>
         </div>
         <div id="display-rules">
             <p>Tentez de gagner avec le moins d'essais possible.<br><br>
@@ -27,10 +39,21 @@
         <div  id="attempt">
             Nombre de coups : 0
         </div>
-        
-        <div class="display-game">
-        
+        <div class="game">
+            <div id="menu-level">
+                <select name="level" id="level">
+                    <option value="level1">Memory 4x3</option>
+                    <option value="level2">Memory 4x4</option>
+                    <option value="level3">Memory 4x5</option>
+                </select>
+            </div>
+            
+            </select>
+            <div class="display-game">
+            
+                </div>
         </div>
+   
     </div>
    
     

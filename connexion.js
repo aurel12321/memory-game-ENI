@@ -1,30 +1,28 @@
-let inputMailConnexion = document.getElementById('email-connexion')
-let inputPasswordConnexion = document.getElementById('password-connexion')
-console.log(inputMailConnexion);
+let inputMailConnexion = document.getElementById('email-connexion');
+let inputPasswordConnexion = document.getElementById('password-connexion');
+let UsersDatas = JSON.parse(localStorage.getItem('data'));
 
-let checkConnexion=false;
 
-document.getElementById("connexion-btn").addEventListener("click",()=> {
-    for (let i = 0; i < localStorage.length; i++) {
-        let key = localStorage.key(i);
-        let tabValue = localStorage.getItem(key);
-        let tabJSON = JSON.parse(tabValue)
-        console.log(tabJSON);
+let checkConnexion = false;
 
-        if (tabJSON.mail == inputMailConnexion.value && tabJSON.password == inputPasswordConnexion.value) {
-            checkConnexion=true
+document.getElementById("connexion-btn").addEventListener("click", () => {
+    for (let i = 0; i < UsersDatas.length; i++) {
+
+        if (UsersDatas[i].mail == inputMailConnexion.value && UsersDatas[i].password == inputPasswordConnexion.value) {
+            checkConnexion = true;
         }
-      
-       
-        
     }
+
+
+
     if (checkConnexion) {
-        alert("Vous êtes connecté")
-        document.location = "profil.html"
-        console.log(localStorage);
-        
+        alert("Vous êtes connecté");
+        document.location = "jeu.html";
+
+
     }
+
     else {
-        alert("identifiants incorrects")
+        alert("identifiants incorrects");
     }
 })
